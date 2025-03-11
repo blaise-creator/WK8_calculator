@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Private variables for UI elements (input fields and result display)
+    // Private variables for UI elements 
     private EditText Number1;
     private EditText Number2;
     private TextView ResultBox;
@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
                 result = num1 * num2;
                 break;
             case "divide":
-                // Handling division by zero case
                 if (num2 == 0) {
                     ResultBox.setText("Cannot divide by zero");
                     return;
@@ -72,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         ResultBox.setText("Result: "+result);
     }
 
-    // These methods when the buttons are clicked in XML
+    // methods when the buttons are clicked in XML
     public void add(View view) { calculate(view, "add"); }
     public void subtract(View view) { calculate(view, "subtract"); }
     public void multiply(View view) { calculate(view, "multiply"); }
